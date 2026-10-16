@@ -1,8 +1,0 @@
-<html>
-
-<title> NDC </title>
-
-<body> NDC Website </body>
-
-
-</html>
