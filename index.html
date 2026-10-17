@@ -1,7 +1,274 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Nepal Development Consultancy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="info-strip">
+    <div class="container info-strip__inner">
+      <a href="mailto:nepdev.consultancy@gmail.com">nepdev.consultancy@gmail.com</a>
+      <a href="tel:+977-01-5706267">+977-01-5706267</a>
+    </div>
+  </div>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__logo" aria-hidden="true"><img src="assets/logo.jpg" alt="Your Company Name logo" style="height:48px; width:auto; max-width:200px; display:block;"></span>
+        <span class="brand__name">Nepal Development Consultancy (NDC)</span>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+      <nav class="nav" aria-label="Main">
+        <ul class="menu">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="has-sub">
+            <a href="services.html">Services</a>
+            <ul class="sub">
+              <li><a href="services.html#engineering">Engineering</a></li>
+              <li><a href="services.html#research">Socio-economic Research and Study</a></li>
+              <li><a href="services.html#planning">Urban/Rural Planning</a></li>
+              <li><a href="services.html#environment">Environmental Management</a></li>
+              <li><a href="services.html#gis-analysis">GIS Analysis</a></li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="projects.html">Projects</a>
+            <ul class="sub">
+              <li><a href="projects.html#all">All projects</a></li>
+              <li><a href="projects.html#urban-settlement-planning">Urban and Settlement Planning</a></li>
+              <li><a href="projects.html#land-use-planning">Land Use Planning</a></li>
+              <li><a href="projects.html#gis-mapping">GIS and Mapping</a></li>
+              <li><a href="projects.html#transportation-design">Transportation Design</a></li>
+              <li><a href="projects.html#social-science">Social Science</a></li>
+              <li><a href="projects.html#disaster-management">Disaster Management</a></li>
+            </ul>
+          </li>
+          <li><a href="publications.html">Publications</a></li>
+          <li class="has-sub">
+            <a href="events.html">Media</a>
+            <ul class="sub">
+              <li><a href="events.html">Events</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a class="btn btn--nav" href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+  
 
-<title>NDC</title>
 
-<body>NDC Website</body>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__tag">Consultants in planning, engineering and research</p>
+          <h1>Integrated Engineering, Planning and Research for Development</h1>
+          <p class="hero__lead">Nepal Development Consultancy (NDC) is a multidisciplinary consulting firm based in Nepal, specializing in engineering, urban and rural planning, GIS and spatial analysis, ecosystem-based adaptation, and socio-economic and environmental research. We work with government agencies, development partners, INGOs, and other institutions to provide evidence-based, practical solutions that advance sustainable development, strengthen infrastructure planning, and support resilient communities across Nepal.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="services.html">Our services</a>
+            <a class="btn btn--light" href="projects.html">See our projects</a>
+          </div>
+        </div>
+        <div class="hero__media" role="img" aria-label="Photo placeholder">
+          <span>Add a photo here</span>
+        </div>
+      </div>
+    </section>
 
+    <!-- Services (main emphasis) -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="services__head">
+          <h2>Our services</h2>
+          <p>Five core services, delivered by one team. Each has its own page with methods, past work and the people behind it.</p>
+        </div>
+        <div class="services__grid">
+          <a class="service" href="services.html#engineering">
+            <h3>Engineering</h3>
+            <p>A line on the design and engineering work you carry out and for whom.</p>
+            <span class="service__more">Learn more</span>
+          </a>
+          <a class="service" href="services.html#research">
+            <h3>Socio-economic Research and Study</h3>
+            <p>A line on the surveys, studies and assessments you deliver.</p>
+            <span class="service__more">Learn more</span>
+          </a>
+          <a class="service" href="services.html#planning">
+            <h3>Urban/Rural Planning</h3>
+            <p>A line on the plans you prepare for towns, villages and regions.</p>
+            <span class="service__more">Learn more</span>
+          </a>
+          <a class="service" href="services.html#environment">
+            <h3>Environmental Management</h3>
+            <p>A line on the assessments and management plans you provide.</p>
+            <span class="service__more">Learn more</span>
+          </a>
+          <a class="service" href="services.html#gis-analysis">
+            <h3>GIS Analysis</h3>
+            <p>A line on the spatial analysis and data work you offer.</p>
+            <span class="service__more">Learn more</span>
+          </a>
+          <div class="service service--cta">
+            <h3>Not sure which service you need?</h3>
+            <p>Tell us about your project and we will point you to the right team.</p>
+            <a class="btn btn--primary" href="contact.html">Talk to us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sectors -->
+    <section class="sectors" id="sectors">
+      <div class="container">
+        <h2>Our projects, by sector</h2>
+        <ul class="sectors__grid">
+          <li><a href="urban-settlement-services.html#planning">Urban and Settlement Planning</a></li>
+          <li><a href="land-use-services.html#planning">Land Use Planning</a></li>
+          <li><a href="projects.html#gis-mapping">GIS and Mapping</a></li>
+          <li><a href="projects.html#transportation-design">Transportation Design</a></li>
+          <li><a href="projects.html#social-science">Social Science</a></li>
+          <li><a href="projects.html#disaster-management">Disaster Management</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Numbers -->
+    <section class="stats">
+      <div class="container stats__grid">
+        <div><strong>150+</strong><span>Projects completed</span></div>
+        <div><strong>40+</strong><span>Clients served</span></div>
+        <div><strong>25</strong><span>Specialists on the team</span></div>
+        <div><strong>15 yrs</strong><span>Of professional practice</span></div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="story">
+      <div class="container story__grid">
+        <div>
+          <h2>About us</h2>
+          <p>At Nepal Development Consultancy, we bring together multidisciplinary expertise, research, and local knowledge to address development challenges across Nepal. Through innovative planning and practical solutions, we strive to create lasting value for communities, institutions, and the environment.</p>
+          <a class="textlink" href="about.html">Read more about us</a>
+        </div>
+        <div class="story__cards">
+          <article class="mv">
+            <h3>Our mission</h3>
+            <p>To provide practical and sustainable solutions that improve lives and support Nepal’s development.</p>
+          </article>
+          <article class="mv">
+            <h3>Our vision</h3>
+            <p>To help build a more sustainable, resilient, and prosperous Nepal for future generations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section class="publications">
+      <div class="container">
+        <div class="section-head">
+          <h2>Publications</h2>
+          <a class="textlink" href="publications.html">All publications</a>
+        </div>
+        <div class="pub-grid">
+          <a class="pub" href="publications.html">
+            <div class="pub__cover"></div>
+            <h3>Report or paper title</h3>
+            <p>Year, type of document and a one-line summary.</p>
+          </a>
+          <a class="pub" href="publications.html">
+            <div class="pub__cover"></div>
+            <h3>Report or paper title</h3>
+            <p>Year, type of document and a one-line summary.</p>
+          </a>
+          <a class="pub" href="publications.html">
+            <div class="pub__cover"></div>
+            <h3>Report or paper title</h3>
+            <p>Year, type of document and a one-line summary.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest 
+    <section class="latest">
+      <div class="container">
+        <div class="section-head">
+          <h2>Latest from us</h2>
+          <a class="textlink" href="news.html">All news and events</a>
+        </div>
+        <div class="latest__grid">
+          <article class="post"><div class="post__img"></div><h3>News or event title</h3><p>Date, and a one-line summary.</p></article>
+          <article class="post"><div class="post__img"></div><h3>News or event title</h3><p>Date, and a one-line summary.</p></article>
+          <article class="post"><div class="post__img"></div><h3>News or event title</h3><p>Date, and a one-line summary.</p></article>
+        </div>
+      </div>
+    </section>
+  -->
+
+    <!-- Call to action -->
+    <section class="cta">
+      <div class="container cta__inner">
+        <div>
+          <h2>Have a project in mind?</h2>
+          <p>Send us a short brief and we will reply with how we can help, and what it would take.</p>
+        </div>
+        <div class="cta__actions">
+          <a class="btn btn--primary" href="contact.html">Contact us</a>
+          <a class="btn btn--light" href="projects.html">View our work</a>
+        </div>
+      </div>
+    </section>
+  
+  </main>
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <strong class="footer__name">Nepal Development Consultancy</strong>
+        <p>At Nepal Development Consultancy, we work closely with communities and development partners to find practical solutions that meet local needs and contribute to a better future for Nepal.</p>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="news.html">News</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="services.html#engineering">Engineering</a></li>
+          <li><a href="services.html#research">Research and Study</a></li>
+          <li><a href="services.html#planning">Urban/Rural Planning</a></li>
+          <li><a href="services.html#environment">Environmental Management</a></li>
+          <li><a href="services.html#gis-analysis">GIS Analysis</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Get in touch</h3>
+        <ul>
+          <li>Address: Anamnagar, Kathmandu, Nepal</li>
+          <li>Email: <a href="mailto:nepdev.consultancy@gmail.com">nepdev.consultancy@gmail.com</a></li>
+          <li>Phone: <a href="tel:+977-01-5706267">+977-01-5706267</a> <a href="tel:+977-9841815004">+977-9841815004</a></li>
+          <li><a href="contact.html">Contact page</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__legal">&copy; 2026 Nepal Development Consultancy. All rights reserved.</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
 </html>
