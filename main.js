@@ -10,7 +10,7 @@
   var more = document.getElementById('more');
   var tabs = Array.prototype.slice.call(document.querySelectorAll('.tabs a'));
 
-  var PAGE = 24;                 // how many cards to show at a time
+  var PAGE = 24;
   var limit = more ? PAGE : Infinity;
 
   function apply(reset) {
