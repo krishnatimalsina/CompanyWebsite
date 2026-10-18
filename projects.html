@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projects | Nepal Development Consultancy</title>
+  <title>Projects | Your Company Name</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
     <div class="container topbar__inner">
       <a class="brand" href="index.html">
         <span class="brand__logo" aria-hidden="true"><img src="assets/logo.jpg" alt="Your Company Name logo" style="height:48px; width:auto; max-width:200px; display:block;"></span>
-        <span class="brand__name">Nepal Development Consultancy</span>
+        <span class="brand__name">Nepal Development Consultancy (NDC)</span>
       </a>
       <input type="checkbox" id="nav-toggle" class="nav-toggle">
       <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
@@ -37,7 +37,7 @@
             </ul>
           </li>
           <li class="has-sub">
-            <a class="active" href="projects.html">Projects</a>
+            <a class="active", href="projects.html">Projects</a>
             <ul class="sub">
               <li><a href="projects.html#all">All projects</a></li>
               <li><a href="projects.html#urban-settlement-planning">Urban and Settlement Planning</a></li>
@@ -63,59 +63,686 @@
     </div>
   </header>
   <main id="main">
-  <section class="page-hero"><div class="container"><h1>Projects</h1><p>Our work, grouped by sector. Choose a sector or search by name, client or place.</p></div></section>
+  <section class="page-hero"><div class="container"><h1>Projects</h1><p>Our work, grouped by sector. Choose a sector, pick a year, or search by name, client or place.</p></div></section>
 
 <section class="section"><div class="container">
-  <div class="toolbar">
-    <nav class="tabs" aria-label="Filter by sector"><a href="#all">All</a><a href="#urban-settlement-planning">Urban and Settlement Planning</a><a href="#land-use-planning">Land Use Planning</a><a href="#gis-mapping">GIS and Mapping</a><a href="#transportation-design">Transportation Design</a><a href="#social-science">Social Science</a><a href="#disaster-management">Disaster Management</a></nav>
-    <input type="search" id="search" placeholder="Search projects" aria-label="Search projects">
+  <nav class="tabs" aria-label="Filter by sector"><a href="#all">All</a><a href="#urban-settlement-planning">Urban and Settlement Planning</a><a href="#land-use-planning">Land Use Planning</a><a href="#gis-mapping">GIS and Mapping</a><a href="#infrastructure-design">Infrastructure and Transportation Design</a><a href="#social-science">Social Science</a><a href="#disaster-management">Environment and Disaster Management</a></nav>
+  <div class="filters">
+    <input type="search" id="search" placeholder="Search by name, client or place" aria-label="Search projects">
+    <select id="year" class="filter" aria-label="Filter by fiscal year"><option value="">All years</option><option value="Ongoing">Ongoing</option><option value="2080/81">FY 2080/81</option><option value="2079/80">FY 2079/80</option><option value="2078/79">FY 2078/79</option><option value="2077/78">FY 2077/78</option><option value="2076/77">FY 2076/77</option><option value="2075/76">FY 2075/76</option><option value="2074/75">FY 2074/75</option><option value="2073/74">FY 2073/74</option><option value="2072/73">FY 2072/73</option><option value="2071/72">FY 2071/72</option><option value="2070/71">FY 2070/71</option><option value="2069/70">FY 2069/70</option><option value="2068/69">FY 2068/69</option></select>
   </div>
   <p class="count" id="count" aria-live="polite"></p>
   <div class="project-grid">
-    <!-- HOW TO ADD A PROJECT: copy one <article class="project"> block below and paste it in this grid.
-         Change data-sector to one of: urban-settlement-planning, land-use-planning, gis-mapping,
-         transportation-design, social-science, disaster-management. Then edit the tag, title, text and photo.
-         To add a photo, replace <div class="photo ..."><span>Add photo</span></div> with <img src="images/name.jpg" alt="..."> inside that div. -->
-
-    <article class="project" data-item data-sector="urban-settlement-planning">
-      <div class="photo photo--wide"><span>Add photo</span></div>
-      <div class="project__body">
-        <span class="tag">Urban and Settlement Planning</span>
-        <h3>Project title</h3>
-        <p class="meta">Client &middot; Location &middot; Year</p>
-        <p>One or two lines about the project and what you delivered.</p>
-        <a class="textlink" href="#">View details</a>
-      </div>
+    <!-- HOW TO ADD A PROJECT: copy one <article class="project project--list"> block, paste it at the top of this grid,
+         and edit data-sector, data-year, the tag, title, client and year.
+         data-sector must be one of: urban-settlement-planning, land-use-planning, gis-mapping,
+         infrastructure-design, social-science, disaster-management.
+         OPTIONAL PHOTO: add <div class="photo photo--wide"><span>Add photo</span></div> as the first line inside the article. -->
+    <article class="project project--list" data-item data-sector="social-science" data-year="Ongoing">
+      <span class="tag">Social Science</span>
+      <h3>Re-settlement Action Plan (RAP) of Tharuhat Road, Bara Parsa District</h3>
+      <p class="meta">Provincial Government, Dhanusha</p><p class="meta">Ongoing</p>
     </article>
-    <article class="project" data-item data-sector="gis-mapping">
-      <div class="photo photo--wide"><span>Add photo</span></div>
-      <div class="project__body">
-        <span class="tag">GIS and Mapping</span>
-        <h3>Project title</h3>
-        <p class="meta">Client &middot; Location &middot; Year</p>
-        <p>One or two lines about the project and what you delivered.</p>
-        <a class="textlink" href="#">View details</a>
-      </div>
+    <article class="project project--list" data-item data-sector="land-use-planning" data-year="2080/81">
+      <span class="tag">Land Use Planning</span>
+      <h3>Preparation of Risk Sensitive Land Use Planning (RSLUP) of Jiri and Tikapur Municipalities</h3>
+      <p class="meta">USAID, DAI (USAID Tayar Nepal – Improved Disaster Risk Management Project)</p><p class="meta">FY 2080/81</p>
     </article>
-    <article class="project" data-item data-sector="disaster-management">
-      <div class="photo photo--wide"><span>Add photo</span></div>
-      <div class="project__body">
-        <span class="tag">Disaster Management</span>
-        <h3>Project title</h3>
-        <p class="meta">Client &middot; Location &middot; Year</p>
-        <p>One or two lines about the project and what you delivered.</p>
-        <a class="textlink" href="#">View details</a>
-      </div>
+    <article class="project project--list" data-item data-sector="land-use-planning" data-year="2079/80">
+      <span class="tag">Land Use Planning</span>
+      <h3>Preparation of Land Use Plan of Tinpatan Rural Municipality, Sindhuli</h3>
+      <p class="meta">Tinpatan Rural Municipality</p><p class="meta">FY 2079/80</p>
+    </article>
+    <article class="project project--list" data-item data-sector="land-use-planning" data-year="2079/80">
+      <span class="tag">Land Use Planning</span>
+      <h3>Preparation of Land Use Plan of Jhapa Rural Municipality, Jhapa</h3>
+      <p class="meta">Jhapa Rural Municipality</p><p class="meta">FY 2079/80</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2079/80">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Feasibility Study and DPR of Cold Store and Chilling Centre at Dhunibeshi Municipality, Dhading</h3>
+      <p class="meta">DUDBC</p><p class="meta">FY 2079/80</p>
+    </article>
+    <article class="project project--list" data-item data-sector="disaster-management" data-year="2079/80">
+      <span class="tag">Environment and Disaster Management</span>
+      <h3>Preparation of Risk Sensitive Management Action Plan of Gauradaha Municipality, Jhapa</h3>
+      <p class="meta">FY 2079/80</p>
+    </article>
+    <article class="project project--list" data-item data-sector="social-science" data-year="2078/79">
+      <span class="tag">Social Science</span>
+      <h3>Preparation of Revenue Improvement Action Plan of Local Governments (RFP No.: NCB/Consulting/FRP/RIAP/Cluster-1)</h3>
+      <p class="meta">Provincial Governance Centre, Jawalakhel, Bagmati Province</p><p class="meta">FY 2078/79</p>
+    </article>
+    <article class="project project--list" data-item data-sector="social-science" data-year="2078/79">
+      <span class="tag">Social Science</span>
+      <h3>Preparation of Revenue Improvement Action Plan of Local Governments (RFP No.: NCB/Consulting/FRP/RIAP/Cluster-1)</h3>
+      <p class="meta">Provincial Governance Centre, Jawalakhel, Bagmati Province</p><p class="meta">FY 2078/79</p>
+    </article>
+    <article class="project project--list" data-item data-sector="gis-mapping" data-year="2078/79">
+      <span class="tag">GIS and Mapping</span>
+      <h3>Mapping of geographical location within 20 m of both banks of the river within 1.5 km from Gokarna barrage in Bagmati watershed</h3>
+      <p class="meta">High Powered Committee for Integrated Development of the Bagmati Civilization, Guheswori, Kathmandu</p><p class="meta">FY 2078/79</p>
+    </article>
+    <article class="project project--list" data-item data-sector="social-science" data-year="2078/79">
+      <span class="tag">Social Science</span>
+      <h3>Preparation of Revenue Improvement Action Plan of Diktel Rupakot Majhuwagadhi Municipality, Diktel</h3>
+      <p class="meta">Province Training Centre, Kalwalguri, Jhapa, Province no 1</p><p class="meta">FY 2078/79</p>
+    </article>
+    <article class="project project--list" data-item data-sector="land-use-planning" data-year="2077/78">
+      <span class="tag">Land Use Planning</span>
+      <h3>Preparation of Risk Sensitive Land Use Planning (RSLUP) of Neelakantha and Dullu Municipalities</h3>
+      <p class="meta">USAID, DAI (USAID Tayar Nepal – Improved Disaster Risk Management Project)</p><p class="meta">FY 2077/78</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2077/78">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Physical Development Plan for Integrated Settlement Development in Santhal Community of Urlabari Municipality, Morang District</h3>
+      <p class="meta">DUDBC</p><p class="meta">FY 2077/78</p>
+    </article>
+    <article class="project project--list" data-item data-sector="social-science" data-year="2077/78">
+      <span class="tag">Social Science</span>
+      <h3>Impact Assessment of COVID-19 on Agriculture, Food and Nutrition Security in Nepal</h3>
+      <p class="meta">Food and Agricultural Organization (FAO), Nepal</p><p class="meta">FY 2077/78</p>
+    </article>
+    <article class="project project--list" data-item data-sector="social-science" data-year="2077/78">
+      <span class="tag">Social Science</span>
+      <h3>Impact Assessment of COVID-19 on Agriculture, Food and Nutrition Security in Nepal</h3>
+      <p class="meta">Food and Agricultural Organization (FAO), Nepal</p><p class="meta">FY 2077/78</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2076/77">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Morphological Retainment and Enhancement Plan of Trans Himalaya Trail of Syaphrubesi, Rasuwa</h3>
+      <p class="meta">DUDBC, New Town Project Coordination Office</p><p class="meta">FY 2076/77</p>
+    </article>
+    <article class="project project--list" data-item data-sector="gis-mapping" data-year="2076/77">
+      <span class="tag">GIS and Mapping</span>
+      <h3>Preparation of UICI (Urban Infrastructure Condition Index) of 133 municipalities</h3>
+      <p class="meta">DUDBC</p><p class="meta">FY 2076/77</p>
+    </article>
+    <article class="project project--list" data-item data-sector="gis-mapping" data-year="2076/77">
+      <span class="tag">GIS and Mapping</span>
+      <h3>Preparation of Base Map and Metric Addressing System of Bardaghat and Sunwal Municipalities of Nawalparasi District</h3>
+      <p class="meta">DUDBC</p><p class="meta">FY 2076/77</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2075/76">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Integrated Urban Development Plan (IUDP) of 19 Municipalities (Contract ID: DUDBC/CS/QCBS-03-074/74)</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2075/76</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2075/76">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Integrated Urban Development Plan (IUDP) of 13 Municipalities (Contract ID: DUDBC/CS/QCBS-08-074/74)</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2075/76</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2075/76">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Master Plan for Developing Chandrapur as a Smart City</h3>
+      <p class="meta">NTPCO, DUDBC, Babarmahal</p><p class="meta">FY 2075/76</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2075/76">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Master Plan for Developing Dullu as a Smart City</h3>
+      <p class="meta">NTPCO, DUDBC, Babarmahal</p><p class="meta">FY 2075/76</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2075/76">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Master Plan and Detailed Architectural and Engineering Design and Cost Estimation of First Phase Development Works for Sports Ground at Godawari Municipality, Kailali</h3>
+      <p class="meta">Godawari Municipality</p><p class="meta">FY 2075/76</p>
+    </article>
+    <article class="project project--list" data-item data-sector="land-use-planning" data-year="2075/76">
+      <span class="tag">Land Use Planning</span>
+      <h3>Preparation of Land Use Plan of Katahari Rural Municipality</h3>
+      <p class="meta">Katahari Rural Municipality</p><p class="meta">FY 2075/76</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2075/76">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Integrated Development Plan of Katahari Rural Municipality</h3>
+      <p class="meta">Katahari Rural Municipality</p><p class="meta">FY 2075/76</p>
+    </article>
+    <article class="project project--list" data-item data-sector="disaster-management" data-year="2075/76">
+      <span class="tag">Environment and Disaster Management</span>
+      <h3>Preparation of IEE of Tamor River, Phungling, Taplejung</h3>
+      <p class="meta">Phungling Municipality, Taplejung</p><p class="meta">FY 2075/76</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2075/76">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Detail Survey, Design and Cost Estimate of Phuyatappa, Odare Salleri, Sanagaun, Bulung Khola Water Supply, Panchthar</h3>
+      <p class="meta">Division Water Supply Project, Panchthar</p><p class="meta">FY 2075/76</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2075/76">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Detail Engineering Survey and Design of New Water Supply Projects (Achham)</h3>
+      <p class="meta">Water Supply and Sanitation Division, Doti</p><p class="meta">FY 2075/76</p>
+    </article>
+    <article class="project project--list" data-item data-sector="disaster-management" data-year="2075/76">
+      <span class="tag">Environment and Disaster Management</span>
+      <h3>IEE of Miklagunj View Tower, Miklajung</h3>
+      <p class="meta">Miklajung Rural Municipality</p><p class="meta">FY 2075/76</p>
+    </article>
+    <article class="project project--list" data-item data-sector="social-science" data-year="2075/76">
+      <span class="tag">Social Science</span>
+      <h3>Informal Paddy Export Status</h3>
+      <p class="meta">Ministry of Agriculture, Livestock Development Division, Singhadurbar</p><p class="meta">FY 2075/76</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2075/76">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Master Plan of Shivapuri Dham at Dhangadhi Sub-metropolitan City, Dhangadhi</h3>
+      <p class="meta">Dhangadhi Sub-metropolitan City</p><p class="meta">FY 2075/76</p>
+    </article>
+    <article class="project project--list" data-item data-sector="disaster-management" data-year="2074/75">
+      <span class="tag">Environment and Disaster Management</span>
+      <h3>Detailed Survey and Preparation of Report for Rainwater Harvesting Project in Different Districts</h3>
+      <p class="meta">Department of Water Supply and Sewerage, Climate Change Adaptation Section, Panipokhari</p><p class="meta">FY 2074/75</p>
+    </article>
+    <article class="project project--list" data-item data-sector="social-science" data-year="2074/75">
+      <span class="tag">Social Science</span>
+      <h3>Assessment on Informal Cross-Border Rice Export</h3>
+      <p class="meta">Ministry of Agriculture</p><p class="meta">FY 2074/75</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2074/75">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Detail Engineering Survey, Design and Report Preparation of Various WSP Projects in Kanchanpur District</h3>
+      <p class="meta">Department of Water Supply and Sewerage, Terai Madhesh Water Supply Improvement Programmes, Panipokhari</p><p class="meta">FY 2074/75</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2074/75">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Municipal Transport Master Plan of Barhadashi Rural Municipality, Jhapa</h3>
+      <p class="meta">Barhadashi Rural Municipality</p><p class="meta">FY 2074/75</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2074/75">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Master Plan of Chhatghat and Detailed Engineering Report of Telkuwa Road in Mahagadhimai Municipality, Bara</h3>
+      <p class="meta">DUDBC, Division Office Parsa</p><p class="meta">FY 2074/75</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2074/75">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Detail Design, Cost Estimation, Report Preparation and Production, Mega Dang Valley Irrigation Project</h3>
+      <p class="meta">Irrigation Project, Dang</p><p class="meta">FY 2074/75</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2074/75">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Physical Development Plan and Detail Engineering Report (DER) of Two Major Infrastructure of Pragatinagar TDC Area of Dang District and Budar TDC Area of Doti District</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2074/75</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2074/75">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Tourism Master Plan of Kankai Municipality</h3>
+      <p class="meta">Kankai Municipality</p><p class="meta">FY 2074/75</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2074/75">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Master Plan for Developing Nijgadh as Smart City (Package No. CS-02-73/74)</h3>
+      <p class="meta">New Town Project Coordination Office, DUDBC, Babarmahal</p><p class="meta">FY 2074/75</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2074/75">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Master Plan for Developing Nijgadh as Smart City (Package No. CS-01-73/74)</h3>
+      <p class="meta">New Town Project Coordination Office, DUDBC, Babarmahal</p><p class="meta">FY 2074/75</p>
+    </article>
+    <article class="project project--list" data-item data-sector="land-use-planning" data-year="2074/75">
+      <span class="tag">Land Use Planning</span>
+      <h3>Preparation of Land Use Plan of Bhadrapur Municipality</h3>
+      <p class="meta">Municipal Executive, Bhadrapur Municipality, Jhapa</p><p class="meta">FY 2074/75</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2073/74">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Detailed Engineering Report of Ilam Municipality Buspark</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2073/74">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Integrated Settlement Development Plan and Detail Engineering Design of One Prioritized Infrastructure Project of Chuma Valley in Gorkha District</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2073/74">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Integrated Urban Development Plan (IUDP) of Bhadrapur Municipality</h3>
+      <p class="meta">Bhadrapur Municipality</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2073/74">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Feasibility Study of 10 New Towns Along Postal Highway of Terai-Madhesh of Nepal</h3>
+      <p class="meta">New Town Project Coordination Office, DUDBC, Babarmahal</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2073/74">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Strategic Urban Development Plan of Bheriganga New Town, Surkhet and Bhingri New Town, Pyuthan District</h3>
+      <p class="meta">New Town Project Coordination Office, DUDBC, Babarmahal</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2073/74">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Periodic Plan of Jhalari Pipaladi Municipality, Kanchanpur District</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2073/74">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Periodic Plan of Attariya Municipality, Kailali District</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2073/74">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Physical Development Plan and DPR of Major Infrastructure of Phedikhola, Syangja District</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2073/74">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Feasibility Study of Nawalparasi Water Supply and Sanitation Project, Nawalparasi District</h3>
+      <p class="meta">Sukhha Chhetra (Arid Zone) Water Supply and Sanitation Project Management Office</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2073/74">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Master Plan and Detailed Engineering Design of Drainage and Sewerage Network of Ministry Quarter Pulchowk, Lalitpur</h3>
+      <p class="meta">Building Construction Maintenance Division Office, Anamnagar, Kathmandu</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2073/74">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Detail Engineering Survey and Design of Water Treatment Plants (Morang, Panchthar District)</h3>
+      <p class="meta">Department of Water Supply and Sewerage, Water Quality Section, Panipokhari</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2073/74">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Detailed Engineering Design and Study Report of Deep Boring (Hetauda)</h3>
+      <p class="meta">Water Supply and Sanitation Division Office, Hetauda</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2073/74">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Detailed Feasibility Study of Tikeling Kaklabung Irrigation Project, Sandu 4, 5, Terhathum District</h3>
+      <p class="meta">Feasibility Study Unit, Irrigation Department, Jawalakhel</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2073/74">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Consultancy Service for Detailed Survey, Design and Report Preparation of Masina Patare Irrigation Sub-project, Chinchu, Surkhet</h3>
+      <p class="meta">Bheri Babai Multi-purpose Project, Surkhet</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2073/74">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Detailed Engineering Report of Phulbari Buspark, Kailali</h3>
+      <p class="meta">DUDBC, Division Office, Kailali</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2073/74">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Detailed Study of Kankai and Chakchaki Irrigation, Jhapa</h3>
+      <p class="meta">Department of Irrigation, Division Office, Jhapa</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2073/74">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Consultancy Service for Detailed Feasibility Study of Datru Kalibuda Irrigation Sub-project in Bajhang</h3>
+      <p class="meta">Department of Irrigation, Division Office, Bajhang</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2073/74">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Detail Project Report of Water Supply System</h3>
+      <p class="meta">DWSS Division Office, Ilam</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="disaster-management" data-year="2073/74">
+      <span class="tag">Environment and Disaster Management</span>
+      <h3>Study of Local Knowledge, Skill and Practices for Adaptation Regarding Climate Change Impact on Water Supply System</h3>
+      <p class="meta">Climate Change Adaptation and Appropriate Technology Section, Department of Water Supply and Sewerage</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2073/74">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Physical Development Plan of Nepaltar, Murkuchi Bazaar, Kamaltar in Katari Municipality of Udayapur District and of Kathpulla, Begashivapur and Tarapatti Sirshiya Market of Dhanusha District</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2073/74">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Physical Development Plan of Madanpokhara VDC and Dankada along Madhi Ring Road, Palpa</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2073/74">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Physical Development Plan of Thaha Municipality, Makawanpur</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2073/74">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Updated Periodic Plan of Ilam Municipality, Ilam</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2073/74">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Detailed Engineering Report of Phikal-Ilam-Phidim Corridor</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2073/74">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Master Plan and Engineering Report of Dakle Buspark, Amargadhi Municipality</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2073/74">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Feasibility Study and Detail Engineering Report of Buspark Libang, Rolpa</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2073/74">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Detail Engineering Report of Buspark in Kamalamai Municipality, Sindhuli</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2073/74">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Detailed Engineering Report of Buspark in Piskar of Sindhupalchowk District</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2073/74</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2072/73">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Detail Survey, Design and DPR Report of Triyuga Buspark, Udayapur District</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2072/73</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2072/73">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Detail Survey, Design and DPR Report of Jaleshwor Buspark, Mahottari District</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2072/73</p>
+    </article>
+    <article class="project project--list" data-item data-sector="gis-mapping" data-year="2072/73">
+      <span class="tag">GIS and Mapping</span>
+      <h3>Preparation of GIS Based Base Map of Gulariya Municipality, Banke and Tulsipur Municipality, Dang</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2072/73</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2072/73">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Drainage Network Plan of Kohalpur TDC Area, Banke</h3>
+      <p class="meta">DUDBC, Division Office</p><p class="meta">FY 2072/73</p>
+    </article>
+    <article class="project project--list" data-item data-sector="gis-mapping" data-year="2072/73">
+      <span class="tag">GIS and Mapping</span>
+      <h3>Preparation of GIS Based Base Map of Inaruwa Municipality, Sunsari</h3>
+      <p class="meta">DUDBC</p><p class="meta">FY 2072/73</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2072/73">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Detail Engineering Design of Bardibas Buspark, Bardibas</h3>
+      <p class="meta">DUDBC</p><p class="meta">FY 2072/73</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2072/73">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Integrated Urban Development Master Plan and Building Bye-laws of Phidim and Basantapur New Town</h3>
+      <p class="meta">DUDBC; NTPCO</p><p class="meta">FY 2072/73</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2072/73">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Detail Survey, Design and Cost Estimation of Community Hall at Mehalkuna, Surkhet</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2072/73</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2072/73">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Detailed Survey and Design of Damauli-Keshavtar-Dharmapani-Bandipur Road, Ch 17.843 km</h3>
+      <p class="meta">DDC, Tanahu</p><p class="meta">FY 2072/73</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2072/73">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Master Plan and Civil Works for Lift Irrigation System of Bheriganga Municipality, Ward No. 1-7</h3>
+      <p class="meta">Bheri Babai Multi-purpose Project, Surkhet</p><p class="meta">FY 2072/73</p>
+    </article>
+    <article class="project project--list" data-item data-sector="disaster-management" data-year="2072/73">
+      <span class="tag">Environment and Disaster Management</span>
+      <h3>Preparation of Initial Environmental Examination (IEE) Report of Jhimruk Khola and its Tributaries</h3>
+      <p class="meta">DDC, Pyuthan</p><p class="meta">FY 2072/73</p>
+    </article>
+    <article class="project project--list" data-item data-sector="social-science" data-year="2072/73">
+      <span class="tag">Social Science</span>
+      <h3>Feasibility Study of Revenue Generation and Mobilization of Panchthar District</h3>
+      <p class="meta">DDC, Panchthar</p><p class="meta">FY 2072/73</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2071/72">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Periodic Plan of Panchthar District</h3>
+      <p class="meta">DDC, Panchthar</p><p class="meta">FY 2071/72</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2071/72">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Master Plan of Kailash Area, Nuwakot District</h3>
+      <p class="meta">DUDBC, Division Office, Nuwakot</p><p class="meta">FY 2071/72</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2071/72">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Detailed Design of Structure, Sanitary, Electrical and Detail Estimate of Panchkhal Municipality Office Building, Kavre</h3>
+      <p class="meta">Panchkhal Municipality</p><p class="meta">FY 2071/72</p>
+    </article>
+    <article class="project project--list" data-item data-sector="social-science" data-year="2071/72">
+      <span class="tag">Social Science</span>
+      <h3>Preparation of Capacity Development Plan of Panchthar District</h3>
+      <p class="meta">DDC, Panchthar</p><p class="meta">FY 2071/72</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2071/72">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Detailed Feasibility Study and DPR Preparation of Baighat Pahare ISP, Parbat District</h3>
+      <p class="meta">Department of Irrigation, Lalitpur</p><p class="meta">FY 2071/72</p>
+    </article>
+    <article class="project project--list" data-item data-sector="gis-mapping" data-year="2071/72">
+      <span class="tag">GIS and Mapping</span>
+      <h3>Preparation of GIS Based Base Map and Physical Development Plan of Lamahi TDC Area, Dang District</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2071/72</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2071/72">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Municipal Transport Master Plan of Phidim Municipality, Phidim</h3>
+      <p class="meta">Phidim Municipality</p><p class="meta">FY 2071/72</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2071/72">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Periodic District Development Plan of Dhading District</h3>
+      <p class="meta">DDC, Dhading</p><p class="meta">FY 2071/72</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2071/72">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Physical Development Plan of Machi Jhitkaiya VDC Area of Dhanusha District</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2071/72</p>
+    </article>
+    <article class="project project--list" data-item data-sector="gis-mapping" data-year="2071/72">
+      <span class="tag">GIS and Mapping</span>
+      <h3>Preparation of GIS Based Urban Map of Lekhnath Municipality</h3>
+      <p class="meta">DUDBC, Babarmahal</p><p class="meta">FY 2071/72</p>
+    </article>
+    <article class="project project--list" data-item data-sector="gis-mapping" data-year="2070/71">
+      <span class="tag">GIS and Mapping</span>
+      <h3>Preparation of GIS Based Base Map of Parroha Town Development Area of Rupandehi District</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2070/71</p>
+    </article>
+    <article class="project project--list" data-item data-sector="gis-mapping" data-year="2070/71">
+      <span class="tag">GIS and Mapping</span>
+      <h3>Preparation of GIS Based Base Map of Nijgadh Area of Bara District</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2070/71</p>
+    </article>
+    <article class="project project--list" data-item data-sector="gis-mapping" data-year="2070/71">
+      <span class="tag">GIS and Mapping</span>
+      <h3>Preparation of Urban Road Inventory of Nepal (Road Inventory of all 58 Municipalities)</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2070/71</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2070/71">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Physical Development Plan of Sohani Sinurjoda Area of Dhanusha District</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2070/71</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2070/71">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Inventory and Master Plan of Ponds of Janakpur Municipality for Long-term Development</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2070/71</p>
+    </article>
+    <article class="project project--list" data-item data-sector="gis-mapping" data-year="2070/71">
+      <span class="tag">GIS and Mapping</span>
+      <h3>Preparation of GIS Based District Environmental Profile of Panchthar District</h3>
+      <p class="meta">DDC, Panchthar</p><p class="meta">FY 2070/71</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2070/71">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Tourism Development Master Plan of Panchthar District</h3>
+      <p class="meta">DDC, Panchthar</p><p class="meta">FY 2070/71</p>
+    </article>
+    <article class="project project--list" data-item data-sector="land-use-planning" data-year="2070/71">
+      <span class="tag">Land Use Planning</span>
+      <h3>Preparation of VDC Level Land Use Map of Lalitpur District</h3>
+      <p class="meta">National Land Use Project</p><p class="meta">FY 2070/71</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2070/71">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Survey, Design, Cost Estimation and Economic Analysis of 20 Irrigation Projects of Kalikot District</h3>
+      <p class="meta">LILI, HELVETAS, Jawalakhel, Lalitpur</p><p class="meta">FY 2070/71</p>
+    </article>
+    <article class="project project--list" data-item data-sector="land-use-planning" data-year="2070/71">
+      <span class="tag">Land Use Planning</span>
+      <h3>Feasibility Study of Land Development of Nepalgunj-Kohalpur (20.5 km) Highway Corridor of Banke District</h3>
+      <p class="meta">Division Office, Banke, DUDBC</p><p class="meta">FY 2070/71</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2070/71">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Detail Feasibility Study of Poktikhola Irrigation Project, Baruneshwor-2, Okhaldhunga</h3>
+      <p class="meta">Department of Irrigation, Jawalakhel, Lalitpur</p><p class="meta">FY 2070/71</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2070/71">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Physical Development Plan of Bardaghat, Nawalparasi District</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2070/71</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2069/70">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Periodic Plan of Rajbiraj Municipality, Rajbiraj, Saptari</h3>
+      <p class="meta">Rajbiraj Municipality and Ministry of Local Development</p><p class="meta">FY 2069/70</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2069/70">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Detail Survey, Design, Cost Estimates and Economic Analysis of Thirteen Irrigation Projects of Achham District</h3>
+      <p class="meta">LILI, Helvetas, Jawalakhel, Lalitpur</p><p class="meta">FY 2069/70</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2069/70">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Study of Traditional Building Materials Used for Building Construction in Jumla District</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2069/70</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2069/70">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Inventory Preparation and Feasibility Study of Integrated Urban Service Centre in Koteshwor-Baneshwor Area of Kathmandu District</h3>
+      <p class="meta">Kathmandu Valley Town Development Committee</p><p class="meta">FY 2069/70</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2069/70">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Pre-feasibility Study of Cable Car Installation at Pathivara, Taplejung District</h3>
+      <p class="meta">Tourism Infrastructure Development Programme</p><p class="meta">FY 2069/70</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2069/70">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Master Plan of Siddhakali Temple Area, Madhyapur Thimi, Bhaktapur District</h3>
+      <p class="meta">Madhyapur Thimi Municipality, Bhaktapur</p><p class="meta">FY 2069/70</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2069/70">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Detail Survey, Design and Cost Estimates of Sali Nadi-Pepsicola (Chainage 5+000 to 10+000) Section of Manohara Project</h3>
+      <p class="meta">Division Office Kathmandu, Department of Road</p><p class="meta">FY 2069/70</p>
+    </article>
+    <article class="project project--list" data-item data-sector="social-science" data-year="2069/70">
+      <span class="tag">Social Science</span>
+      <h3>Household Survey and Evaluation of Dadeldhura and Kanchanpur District for Human Development and Social Protection Pilot Project (HDSPP/MOLD/S/CQS-6)</h3>
+      <p class="meta">Ministry of Federal Affairs and Local Development, Population and Vital Event Registration Management Section</p><p class="meta">FY 2069/70</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2069/70">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Review of Urban Plans and Programmes and Preparation of Long-term Development Plan of Pokhara Valley</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2069/70</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2068/69">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Project Report including Design, Implementation, Operation, Repair and Maintenance Manual of Ganatantra Stambha and Smarak</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2068/69</p>
+    </article>
+    <article class="project project--list" data-item data-sector="gis-mapping" data-year="2068/69">
+      <span class="tag">GIS and Mapping</span>
+      <h3>Preparation of Analytical Tool for Development of Building Information System and Maintenance Policy</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2068/69</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2068/69">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Physical Development Plan of Bhurigaun Bazar of Neulapur VDC, Bardiya District</h3>
+      <p class="meta">DUDBC, Division Office, Nepalgunj, Banke</p><p class="meta">FY 2068/69</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2068/69">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Preparation of Engineering Design, Drawing, Rate Analysis and Detailed Cost Estimation of Proposed Office of the Federation of Nepali Journalists, Media Village, Kathmandu</h3>
+      <p class="meta">Federation of Nepali Journalists, Central Office</p><p class="meta">FY 2068/69</p>
+    </article>
+    <article class="project project--list" data-item data-sector="gis-mapping" data-year="2068/69">
+      <span class="tag">GIS and Mapping</span>
+      <h3>Preparation of Records of Government Buildings in Digital Format under DUDBC, Saptari Division</h3>
+      <p class="meta">DUDBC, Division Office, Saptari</p><p class="meta">FY 2068/69</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2068/69">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Detailed Feasibility Survey and Study of Silki Mul Khola ISP Irrigation, Kalikot</h3>
+      <p class="meta">Mid-Western Irrigation Department, Division-3, Birendranagar, Surkhet</p><p class="meta">FY 2068/69</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2068/69">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Detailed Feasibility Survey, Study, Drawing, Design and Cost Estimation of Sigaudhi, Dhaulakot Irrigation, Dailekh</h3>
+      <p class="meta">Mid-Western Irrigation Department, Division-3, Birendranagar, Surkhet</p><p class="meta">FY 2068/69</p>
+    </article>
+    <article class="project project--list" data-item data-sector="disaster-management" data-year="2068/69">
+      <span class="tag">Environment and Disaster Management</span>
+      <h3>Awareness Programme on Vulnerability Assessment for Implementation of Building Code for Construction of Buildings in Five Municipalities (Lekhnath, Janakpur, Khandbari, Ilam, Kapilbastu)</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2068/69</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2068/69">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Physical Development Plan and DPR of One Key Project of Kuhibhir Namuna VDC of Okhaldhunga District</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2068/69</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2068/69">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Physical Development Plan and DPR of One Key Project of Arukharka VDC of Syangja District</h3>
+      <p class="meta">DUDBC, Division Office, Pokhara, Kaski</p><p class="meta">FY 2068/69</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2068/69">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Feasibility Study of Water Supply Sources and DPR of One Water Supply and Sanitation Project of Burtibang Market Centre, Baglung District</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2068/69</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2068/69">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Feasibility Study of Water Supply Sources and DPR of One Water Supply and Sanitation Project of Khurkot Market Centre, Sindhuli District</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2068/69</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2068/69">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Feasibility Study of Water Supply Sources and DPR of One Water Supply and Sanitation Project of Baireni-Galchhi Market Centre, Dhading District</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2068/69</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2068/69">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Feasibility Study of Road, Sewer and Sanitary Landfill Site Projects and DPR of Major Prioritized Project of Chaurjahari Market Centre, Rukum District</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2068/69</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2068/69">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Feasibility Study of Road, Sewer and Sanitary Landfill Site Projects and DPR of Major Prioritized Project of Saphebagar Market Centre, Achham District</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2068/69</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2068/69">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Feasibility Study of Road and Drainage Projects and DPR of Major Prioritized Project of Patan Market Centre, Baitadi District</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2068/69</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2068/69">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Feasibility Study of Road and Drainage Projects and DPR of Major Prioritized Project of Phidim Market Centre, Panchthar District</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2068/69</p>
+    </article>
+    <article class="project project--list" data-item data-sector="infrastructure-design" data-year="2068/69">
+      <span class="tag">Infrastructure and Transportation Design</span>
+      <h3>Feasibility Study of Road, Sewer and Sanitary Landfill Site Projects and DPR of Major Prioritized Project of Dumre-Bhansar Market Centre, Tanahu District</h3>
+      <p class="meta">DUDBC, Babarmahal, Kathmandu</p><p class="meta">FY 2068/69</p>
+    </article>
+    <article class="project project--list" data-item data-sector="urban-settlement-planning" data-year="2068/69">
+      <span class="tag">Urban and Settlement Planning</span>
+      <h3>Preparation of Periodic Plan of Siraha Municipality</h3>
+      <p class="meta">Siraha Municipality</p><p class="meta">FY 2068/69</p>
     </article>
   </div>
-  <p class="empty" id="empty" hidden>No projects match. Try another sector or search.</p>
+  <p class="empty" id="empty" hidden>No projects match. Try another sector, year or search.</p>
+  <div class="more"><button class="btn btn--primary" id="more" type="button" hidden>Show more</button></div>
 </div></section>
   </main>
   <footer class="footer">
     <div class="container footer__grid">
       <div>
-        <strong class="footer__name">Your Company Name</strong>
-        <p>Two lines describing the company, repeated briefly for visitors who scroll to the bottom.</p>
+        <strong class="footer__name">Nepal Development Consultancy</strong>
+        <p>At Nepal Development Consultancy, we work closely with communities and development partners to find practical solutions that meet local needs and contribute to a better future for Nepal.</p>
       </div>
       <div>
         <h3>Company</h3>
@@ -141,14 +768,14 @@
       <div>
         <h3>Get in touch</h3>
         <ul>
-          <li>Address: Street, City, Nepal</li>
-          <li>Email: <a href="mailto:info@example.com">info@example.com</a></li>
-          <li>Phone: <a href="tel:+9770000000000">+977-000-000-0000</a></li>
+          <li>Address: Anamnagar, Kathmandu, Nepal</li>
+          <li>Email: <a href="mailto:nepdev.consultancy@gmail.com">nepdev.consultancy@gmail.com</a></li>
+          <li>Phone: <a href="tel:+977-01-5706267">+977-01-5706267</a> <a href="tel:+977-9841815004">+977-9841815004</a></li>
           <li><a href="contact.html">Contact page</a></li>
         </ul>
       </div>
     </div>
-    <p class="footer__legal">&copy; 2026 Your Company Name. All rights reserved.</p>
+    <p class="footer__legal">&copy; 2026 Nepal Development Consultancy. All rights reserved.</p>
   </footer>
   <script src="main.js"></script>
 </body>

@@ -281,5 +281,19 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px
   .pub-item .btn { grid-column: 1 / -1; justify-self: start; }
   input[type="search"] { max-width: none; }
 }
-.brand__img { height: 48px; width: auto; max-width: 220px; object-fit: contain; display: block; }
-.brand { gap: 1.3rem; }
+
+/* =====================================================
+   Projects list (many projects)
+   ===================================================== */
+.project-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.project--list { padding: 1.25rem 1.35rem; gap: .3rem; border-left: 4px solid var(--brand); border-radius: 8px; }
+.project--list .photo { margin: -1.25rem -1.35rem 1rem; width: calc(100% + 2.7rem); border-radius: 0; border-width: 0 0 2px; }
+.project--list h3 { font-size: 1.05rem; line-height: 1.4; margin: .1rem 0 .35rem; }
+.project--list .meta { margin: 0; color: var(--ink-soft); }
+.project--list .meta:last-child { font-weight: 600; color: var(--brand); margin-top: .35rem; }
+.filters { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
+.filters input[type="search"] { flex: 1 1 260px; max-width: 420px; }
+select.filter { font: inherit; padding: .7rem .9rem; border: 1px solid #b9c7d9; border-radius: 8px; background: #fff; color: var(--ink); }
+.more { text-align: center; margin-top: 2rem; }
+button.btn { font: inherit; font-weight: 600; cursor: pointer; }
+.sectors__grid a span { display: block; margin-top: .15rem; font-weight: 400; font-size: .9rem; opacity: .8; }
